@@ -1,7 +1,9 @@
 class Solution:
     # 9. Palindrome Number
     def isPalindrome(self, x: int) -> bool:
-        if str(x) == str(x)[::-1]:
-            return True
-        else:
+        # Special case: negative numbers are not palindromes
+        if x < 0:
             return False
+
+        # Convert the number to a string and check if the string is the same forwards and backwards
+        return str(x) == str(x)[::-1]
