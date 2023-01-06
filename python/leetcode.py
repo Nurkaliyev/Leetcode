@@ -12,14 +12,14 @@ class Solution:
         indices = {}
 
         # Loop through the list of numbers
-        for i, num in enumerate(nums):
+        for index, num in enumerate(nums):
             # Check if the target minus the current number is in the dictionary
             if target - num in indices:
                 # If it is, return the indices of the pair of numbers
-                return [indices[target - num], i]
-
-            # Otherwise, add the current number and its index to the dictionary
-            indices[num] = i
+                return [indices[target - num], index]
+            else:
+                # Otherwise, add the current number and its index to the dictionary
+                indices[num] = index
 
         # If we didn't find a pair of numbers, return an empty list
         return []
