@@ -1,5 +1,6 @@
 from typing import List
 class Solution:
+    # 4. Median of Two Sorted Arrays
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         # Merge the two input arrays into one sorted list
         merge_list = sorted(nums1 + nums2)
